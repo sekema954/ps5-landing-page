@@ -1,0 +1,566 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    align-items: center;
+    padding: 0 10% 0 10%;
+    z-index: 2000;
+    position: relative;
+}
+
+/***classlist to add shadow when you scroll the page down***/
+.scrollDown{
+    box-shadow: 0 3px 4px grey;
+
+}
+
+
+.logo{
+    color: skyblue;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: gray;
+    margin: 15px;
+    transition: all .50s;
+}
+
+nav ul li a:hover{
+    color: skyblue;
+}
+
+nav button{
+    width: 120px;
+    height: 35px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 6px 10px skyblue;
+    cursor: pointer;
+    transition: all .50s;
+}
+
+nav button:hover{
+    box-shadow: 4px 9px 15px skyblue;
+}
+
+.menu-bar{
+    cursor: pointer;
+    display: none;
+}
+
+.bar{
+    width: 25px;
+    height: 4px;
+    margin: 4px;
+    background-color: skyblue;
+    transition: all .50s;
+}
+
+.change .bar1{
+    transform: translate(0, 11px)rotate(45deg);
+}
+
+.change .bar2{
+    opacity: 0;
+}
+
+.change .bar3{
+    transform: translate(0, -6px)rotate(-45deg);
+}
+
+
+
+
+
+/***media query to set hamburger icon to visible and nav links to none***/
+@media(max-width:767px){
+    nav ul{
+        display: none;
+    }
+
+    .menu-bar{
+        display: inline-block;
+    }
+}
+
+/***dropdown menu***/
+.dropdown-wrapper{
+    width: 100%;
+    height: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .50s;
+}
+
+/***classlist to change dropdown height****/
+.changeHeight{
+    height: 350px;
+}
+
+.dropdown{
+    width: 100%;
+    display: none;
+}
+
+/***classlist to show links when menuCLicked***/
+.showLinks{
+    display: inline-block;
+}
+
+.dropdown-wrapper ul li{
+    list-style: none;
+    margin: 30px;
+    text-align: center;
+}
+
+.dropdown-wrapper ul li a{
+    text-decoration: none;
+    color: grey;
+    font-size: 25px;
+    font-weight: 500;
+    transition: all .50s;
+}
+
+.dropdown-wrapper ul li a:hover{
+    color: skyblue;
+}
+
+.dropdown-wrapper .order-btn-mobile{
+    width: 100%;
+    height: 40px;
+    background-color: skyblue;
+    box-shadow: 4px 4px 8px skyblue;
+    border: none;
+    border: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/***home section***/
+
+#home{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.home-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    padding: 0 20px 0 20px;
+}
+
+/**media query to switch grid to a 1:2 on smaller devices***/
+@media(max-width:767px){
+    #home{
+    }
+
+    .home-wrapper{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        padding: 0 20px 0 20px;
+    }
+
+    .home-title{
+        font-size: 25px !important;
+    }
+}
+
+.home-title{
+    text-align: left;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+
+.description-wrapper{
+    width: 100%;
+    height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.item-description>div{
+    margin: 20px;
+}
+
+
+.home-wrapper .order-btn button{
+    width: 120px;
+    height: 35px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    box-shadow: 4px 4px 5px skyblue;
+    cursor: pointer;
+    transition: all .50s;
+}
+
+.home-wrapper .order-btn button:hover{
+    box-shadow: 6px 6px 9px skyblue;
+
+}
+
+
+.home-content{
+    color: grey;
+}
+
+.item-image img{
+    width: 100%;
+    height: 100%;
+}
+
+/****feature section***/
+
+
+
+
+.feature-cards-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-box{
+    width: 100%;
+    background-color: rgb(239, 239, 239);
+}
+
+
+.feature-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-title{
+    font-size: 35px;
+}
+
+
+.feature-hero>div{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    text-align: center;
+}
+
+.feature-sub p{
+    color: gray;
+}
+
+.feature-card-wrapper{
+    width: 100%;
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+
+.feature-cards{
+    width: 200px;
+    height: 410px;
+    padding:10px 20px 0 20px;
+    background-color: white;
+    transition: all .50s;
+}
+
+.feature-cards:hover{
+    box-shadow: 1px 1px 5px 4px skyblue;
+
+}
+
+/**media query to switch card height to 100% on smaller***/
+@media(max-width:429px) {
+    .feature-cards{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.chat-icon .fa{
+    font-size: 30px;
+}
+
+.card-title{
+    font-size: 25px;
+}
+
+.arrow-icon{
+    float: right;
+}
+
+.arrow-icon .fa{
+    font-size: 15px;
+    width: 25px;
+    height: 25px;
+    color: white;
+    background-color: skyblue;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .50s;
+}
+
+.arrow-icon .fa:hover{
+    box-shadow: 5px 4px 7px skyblue;
+
+}
+
+.inside-card-wrapper>div{
+    margin: 10px;
+    text-align: left;
+}
+
+
+
+/***specs section****/
+
+#specs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.specs-grid{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows: 1fr; 
+}
+
+/**media query to change specs grid  to 1:2 on smaller device***/
+@media(max-width:767px){
+    .specs-grid{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr; 
+    }
+}
+
+.specs-img img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.specs-title{
+    font-size: 30px;
+    text-align: left;
+}
+
+.specs-content{
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.specs-hold>div{
+    margin: 20px;
+}
+.specs-hero{
+    line-height: 1.5;
+}
+
+
+
+.specs-btn button{
+    width: 120px;
+    height: 35px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    box-shadow: 4px 4px 5px skyblue;
+    cursor: pointer;
+    transition: all .50s;
+}
+
+.specs-btn button:hover{
+    box-shadow: 6px 6px 9px skyblue;
+
+}
+
+
+
+/****review section****/
+  .carousel-indicators {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+
+
+/***item purchase page****/
+
+#purchase-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.purchase-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+
+/***media query to change grid to 1:2***/
+@media(max-width:767px){
+    .purchase-grid{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+.ps5-product img{
+    width: 100%;
+    height: 100%;
+}
+
+.hero-wrapper>div{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.product-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.purchase-title, 
+.product-price{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.product-desc p{
+    width: 70%;
+}
+
+.amazon-btn button{ 
+    width: 120px;
+    height: 35px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    box-shadow: 4px 4px 5px skyblue;
+    cursor: pointer;
+    transition: all .50s;
+}
+
+.amazon-btn button:hover{
+    box-shadow: 6px 6px 9px skyblue;
+
+}
+
+
+
+/****subscribe section****/
+#subscribe{
+    width: 100%;
+    height: 60vh;
+    background-color: lightgray;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-wrapper{
+    width: 100%;
+}
+
+.subscribe-wrapper>div{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.sub-title{
+    font-size: 30px;
+    font-weight: 200;
+}
+
+#subscribe form{
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 0 20px;
+}
+
+#subscribe form input{
+    width: 300px;
+    height: 40px;
+    padding: 0 0 0 20px;
+}
+
+#subscribe form input:focus{
+    outline: none;
+}
+
+
+.subscribe-btn{
+    width: 170px;
+    border: none;
+    background-color: skyblue;
+    color: white;
+    box-shadow: 3px 3px 4px skyblue;
+    cursor: pointer;
+    transition: all .50s;
+}
+
+
+.subscribe-btn:hover{
+    box-shadow: 3px 10px 10px skyblue;
+}
+
+
+.h-captcha{
+    margin-top: 20px;
+}
+
+
