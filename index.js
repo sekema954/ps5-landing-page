@@ -18,3 +18,13 @@ function menuClicked(){
 
 
 
+//add shadow to navbar on window scroll.
+const navbar = document.querySelector(".navbar");
+window.onscroll = ()=>{
+    if(window.scrollY >= 100) {
+        navbar.classList.add("scrollDown");
+    } else {
+        navbar.classList.remove("scrollDown");
+    }
+}
+

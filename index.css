@@ -11,15 +11,16 @@ nav{
     justify-content: space-between;
     white-space: nowrap;
     align-items: center;
-    padding: 0 10% 0 10%;
+    padding: 0 10% 0 10% !important;
     z-index: 2000;
-    position: relative;
+    position: fixed !important;
+    background-color: white;
+
 }
 
 /***classlist to add shadow when you scroll the page down***/
 .scrollDown{
     box-shadow: 0 3px 4px grey;
-
 }
 
 
@@ -117,6 +118,8 @@ nav button:hover{
     justify-content: center;
     align-items: center;
     transition: all .50s;
+    position: fixed;
+    z-index: 1000;
 }
 
 /***classlist to change dropdown height****/
@@ -298,10 +301,11 @@ nav button:hover{
 
 .feature-cards{
     width: 200px;
-    height: 410px;
+    height: 370px;
     padding:10px 20px 0 20px;
     background-color: white;
     transition: all .50s;
+    position: relative;
 }
 
 .feature-cards:hover{
@@ -328,7 +332,9 @@ nav button:hover{
 }
 
 .arrow-icon{
-    float: right;
+    position: absolute;
+    bottom: 0;
+
 }
 
 .arrow-icon .fa{
@@ -428,6 +434,10 @@ nav button:hover{
 
 
 /****review section****/
+
+#review{
+    background-color: lightgray;
+}
   .carousel-indicators {
     border-radius: 50%;
     width: 10px;
