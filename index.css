@@ -124,13 +124,16 @@ nav button:hover{
 
 /***classlist to change dropdown height****/
 .changeHeight{
-    height: 350px;
+    height: 360px;
 }
 
 .dropdown{
+    background-color: white;
+    margin-top: 130px;
     width: 100%;
     padding: 0 2px 0 0;
     display: none;
+    z-index: 1000;
 }
 
 /***classlist to show links when menuCLicked***/
