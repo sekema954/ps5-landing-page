@@ -11,8 +11,8 @@ var bundle3 = document.querySelector(".third");
 bundle1.addEventListener("click", ()=>{
     var priceTotal = document.querySelector(".total-price");
     var payButtonValue = document.querySelector(".pay-btn");
-    priceTotal.textContent = `${baseBundle}`;
-    payButtonValue.textContent = `${baseBundle}`;
+    priceTotal.textContent = `$${baseBundle}`;
+    payButtonValue.textContent = `Pay $${baseBundle}`;
 });
 
 //bundle 2 onclick set total
@@ -20,16 +20,16 @@ bundle1.addEventListener("click", ()=>{
 bundle2.addEventListener("click", ()=> {
     var priceTotal = document.querySelector(".total-price");
     var payButtonValue = document.querySelector(".pay-btn");
-    priceTotal.textContent = `${gowBundle}`;
-    payButtonValue.textContent = `${gowBundle}`;
+    priceTotal.textContent = `$${gowBundle}`;
+    payButtonValue.textContent = `Pay $${gowBundle}`;
 })
 
 //bundle 3 onclick set total
 bundle3.addEventListener("click", ()=> {
     var priceTotal = document.querySelector(".total-price");
     var payButtonValue = document.querySelector(".pay-btn");
-    priceTotal.textContent = `${spidermanBundle}`;
-    payButtonValue.textContent = `${spidermanBundle}`;
+    priceTotal.textContent = `$${spidermanBundle}`;
+    payButtonValue.textContent = `Pay $${spidermanBundle}`;
 })
 
 

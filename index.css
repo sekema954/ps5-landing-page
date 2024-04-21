@@ -326,8 +326,10 @@ nav button:hover{
     }
 }
 
-.chat-icon .fa{
-    font-size: 30px;
+
+.chat-icon img{
+    width: 50px;
+    height: 50px;
 }
 
 .card-title{
@@ -441,11 +443,14 @@ nav button:hover{
 #review{
     background-color: lightgray;
 }
+
   .carousel-indicators {
     border-radius: 50%;
     width: 10px;
     height: 10px;
 }
+
+
 
 
 

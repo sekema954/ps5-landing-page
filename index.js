@@ -28,3 +28,13 @@ window.onscroll = ()=>{
     }
 }
 
+
+//move carousel
+const prevBtn = document.querySelector(".carousel-control-prev-icon");
+const nextBtn = document.querySelector(".next-icon");
+const cardBody = document.querySelector(".carousel-item");
+
+nextBtn.addEventListener("click", ()=> {
+    cardBody.scrollLeft += -200;
+})
+
