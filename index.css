@@ -316,6 +316,10 @@ nav button:hover{
 
 }
 
+.feature-cards a{
+    text-decoration: none;
+}
+
 /**media query to switch card height to 100% on smaller***/
 @media(max-width:429px) {
     .feature-cards{
@@ -590,3 +594,87 @@ nav button:hover{
 }
 
 
+
+/****hardware****/
+
+.hardware-container{
+    width: 100%;
+    position: absolute;
+    top: 100px;
+}
+
+.hardware-wrapper{
+    width: 100%;
+    width: 100%;
+    padding: 0 20px 0 20px;
+}
+
+.hardware-title{
+    font-size: 30px;
+    text-align: center;
+}
+
+.hardware-wrapper>div{
+    margin: 20px;
+}
+
+.ps5-hardware-img{
+    display: flex;
+    justify-content: center;
+}
+
+@media(min-width:870px){
+    .ps5-hardware-img img{
+        width: 60% !important;
+        height: 60% !important;
+    }
+}
+.ps5-hardware-img img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.tab-btns{
+    display: flex;
+    justify-content: center;
+}
+
+.tab-btns button{
+    margin: 1px;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    background-color: skyblue;
+    color: white;
+    border: none;
+}
+
+.tab-content{
+    margin-top: 10px;
+    width: 100%;
+    height: 400px;
+    box-shadow: 1px 1px 2px 2px grey ;
+}
+
+.tab-title-wrapper{
+    width: 100%;
+    padding: 20px 20px 0 20px;
+}
+
+.tab-title-wrapper>div{
+    margin: 10px;
+}
+
+.tab-info{
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.active{
+    display: inline-block !important;
+}
+
+.active-tab-btn{
+    background-color: rgb(14, 62, 81) !important;
+}
