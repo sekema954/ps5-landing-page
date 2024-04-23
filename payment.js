@@ -33,7 +33,18 @@ bundle3.addEventListener("click", ()=> {
 })
 
 
-//change pay btn value 
+//
+const totalPriceElement = document.querySelector(".total-price");
+const payBtn = document.querySelector(".pay-btn");
+
+payBtn.addEventListener('click', ()=>{
+    const totalPrice = parseFloat(totalPriceElement.textContent);
+    if(totalPrice === "0") {
+        alert("Cart Empty!")
+    } else {
+        location.href="paymentcomplete.hmtl";
+    }
+})
 
 
 
