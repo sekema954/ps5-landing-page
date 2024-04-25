@@ -193,6 +193,7 @@ nav button:hover{
 /**media query to switch grid to a 1:2 on smaller devices***/
 @media(max-width:767px){
     #home{
+        height: 100vh;
     }
 
     .home-wrapper{
