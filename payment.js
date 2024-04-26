@@ -30,10 +30,22 @@ bundle3.addEventListener("click", ()=> {
     var payButtonValue = document.querySelector(".pay-btn");
     priceTotal.textContent = `$${spidermanBundle}`;
     payButtonValue.textContent = `Pay $${spidermanBundle}`;
-})
+});
 
 
-//change pay btn value 
+
+//alert cart empty if total = 0
+
+const payBtn = document.querySelector(".pay-btn");
+payBtn.addEventListener("click", ()=>{
+    const formInputs = document.querySelectorAll(".form-controll");
+    const totalElement = document.querySelector(".total-price").textContent;
+    if(totalElement === "0") {
+        alert("Cart Empty!");
+    } else {
+        location.href = "/paymentcomplete.html";
+    }
+});
 
 
 

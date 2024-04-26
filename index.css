@@ -100,6 +100,7 @@ nav button:hover{
     .menu-bar{
         display: inline-block;
     }
+
 }
 
 @media(min-width:768px) {
@@ -175,6 +176,7 @@ nav button:hover{
 
 #home{
     width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,6 +193,7 @@ nav button:hover{
 /**media query to switch grid to a 1:2 on smaller devices***/
 @media(max-width:767px){
     #home{
+        height: 100vh;
     }
 
     .home-wrapper{
@@ -316,6 +319,10 @@ nav button:hover{
 
 }
 
+.feature-cards a{
+    text-decoration: none;
+}
+
 /**media query to switch card height to 100% on smaller***/
 @media(max-width:429px) {
     .feature-cards{
@@ -422,7 +429,6 @@ nav button:hover{
 
 .specs-btn button{
     width: 120px;
-    height: 35px;
     background-color: skyblue;
     color: white;
     border: none;
@@ -439,19 +445,57 @@ nav button:hover{
 
 
 /****review section****/
-
 #review{
-    background-color: lightgray;
+    max-width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
 }
 
-  .carousel-indicators {
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
+
+.review-wrapper{
+    width: 600px;
+    box-shadow: 4px 4px 6px skyblue;
+    background-color: white;
+    padding: 0 10px 0 10px;
 }
 
+.review-title h1{
+    text-align: center;
+    color: lightblue;
+}
 
+.review-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
+.review-content p{
+    color: black;
+    text-align: center;
+    width: 300px;
+}
+
+.nxt-btn{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+
+.nxt-btn .fa{
+    color: skyblue;
+    font-size: 45px;
+    cursor: pointer;
+    transition: all .50s;
+}
+
+.nxt-btn .fa:hover{
+    color: #1877F2;
+}
 
 
 /***item purchase page****/
@@ -589,4 +633,96 @@ nav button:hover{
     margin-top: 20px;
 }
 
+
+
+/****hardware****/
+
+.hardware-container{
+    width: 100%;
+    position: absolute;
+    top: 100px;
+}
+
+.hardware-wrapper{
+    width: 100%;
+    width: 100%;
+    padding: 0 20px 0 20px;
+}
+
+.hardware-title{
+    font-size: 30px;
+    text-align: center;
+}
+
+.hardware-wrapper>div{
+    margin: 20px;
+}
+
+.ps5-hardware-img{
+    display: flex;
+    justify-content: center;
+}
+
+@media(min-width:870px){
+    .ps5-hardware-img img{
+        width: 60% !important;
+        height: 60% !important;
+    }
+}
+.ps5-hardware-img img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.tab-btns{
+    display: flex;
+    justify-content: center;
+}
+
+.tab-btns button{
+    margin: 1px;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    background-color: skyblue;
+    color: white;
+    border: none;
+}
+
+.tab-content{
+    margin-top: 10px;
+    width: 100%;
+    box-shadow: 1px 1px 2px 2px grey ;
+}
+
+.tab-title-wrapper{
+    width: 100%;
+    padding: 20px 20px 0 20px;
+}
+
+.tab-title-wrapper>div{
+    margin: 10px;
+}
+
+.tab-info{
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.active{
+    display: inline-block !important;
+    transition: all .50s;
+        /***classlist to make tab content visible when tab btn clicked****/
+}
+
+.active-tab{
+    background-color: rgb(14, 62, 81) !important;
+    transition: all .50s;
+    /***classlist to change tab-btn color onclick****/
+}
+
+.active-tab-content{
+    display: inline-block;
+}
 
