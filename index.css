@@ -63,7 +63,6 @@ nav button:hover{
 }
 
 .menu-bar{
-    cursor: pointer;
     display: none;
 }
 
@@ -173,6 +172,10 @@ nav button:hover{
 
 
 /***home section***/
+.phrase{
+    color: skyblue;
+    font-weight: 900;
+}
 
 #home{
     width: 100vw;
@@ -192,10 +195,6 @@ nav button:hover{
 
 /**media query to switch grid to a 1:2 on smaller devices***/
 @media(max-width:767px){
-    #home{
-        height: 100vh;
-    }
-
     .home-wrapper{
         display: grid;
         grid-template-rows: repeat(2, 1fr);
@@ -443,63 +442,7 @@ nav button:hover{
 }
 
 
-
-/****review section****/
-#review{
-    max-width: 100%;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f5f5;
-}
-
-
-.review-wrapper{
-    width: 600px;
-    box-shadow: 4px 4px 6px skyblue;
-    background-color: white;
-    padding: 0 10px 0 10px;
-}
-
-.review-title h1{
-    text-align: center;
-    color: lightblue;
-}
-
-.review-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.review-content p{
-    color: black;
-    text-align: center;
-    width: 300px;
-}
-
-.nxt-btn{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px 0 20px;
-}
-
-.nxt-btn .fa{
-    color: skyblue;
-    font-size: 45px;
-    cursor: pointer;
-    transition: all .50s;
-}
-
-.nxt-btn .fa:hover{
-    color: #1877F2;
-}
-
-
 /***item purchase page****/
-
 #purchase-wrapper{
     width: 100%;
     display: flex;
@@ -725,4 +668,99 @@ nav button:hover{
 .active-tab-content{
     display: inline-block;
 }
+
+
+#review{
+    width: 100%;
+    height: 80vh;
+}
+
+.review-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    margin-top: 110px;
+}
+
+@media(max-width:726px) {
+    .review-grid{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+    }
+}
+
+.review-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 40px;
+}
+
+.review-title, .review-sub, .write{
+    padding: 0 0 0 25px;
+}
+
+
+.review-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.center-wrapper{
+    width: 100%;
+}
+
+
+.stat-card{
+    width: 120px;
+    height: 100px;
+    background-color: white;
+    box-shadow: 1px 1px 6px 4px skyblue;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    white-space: wrap;
+}
+
+.review-title h1{
+    font-weight: 900;
+    font-size: 45px;
+}
+
+.stat-value h3{
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.write button{
+    width: 125px;
+    height: 40px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .50s;
+}
+
+.write button:hover{
+    box-shadow: 4px 4px 4px 6px lightblue;
+}
+
+.review-img-content{
+    background-image: url(images/ps5-review.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
