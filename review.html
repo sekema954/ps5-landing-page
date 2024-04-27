@@ -56,9 +56,10 @@
                         <div class="review-sub">
                             <p>Let us know what you think about the new Playstation.<br> We improve based on your reviews.</p>
                         </div>
-                        <form action="" id="review-form">
+                        <form action="https://api.web3forms.com/submit" method="POST" id="review-form">
+                            <input type="hidden" name="access_key" value="3d3897cd-4591-41fc-b11a-a8de678485bf">
                             <div class="message">
-                                <textarea name="" id="" cols="30" rows="10" placeholder="Leave a review..."></textarea>
+                                <textarea name="message" id="" cols="30" rows="10" placeholder="Leave a review..." required></textarea>
                             </div>
                             <div class="review-btn">
                                 <button>Leave a comment</button>
