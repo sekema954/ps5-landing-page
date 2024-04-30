@@ -11,12 +11,12 @@ nav{
     justify-content: space-between;
     white-space: nowrap;
     align-items: center;
-    padding: 0 10% 0 10% !important;
+    padding: 0 10% 0 6% !important;
     z-index: 2000;
     position: fixed !important;
     background-color: white;
-
 }
+
 
 /***classlist to add shadow when you scroll the page down***/
 .scrollDown{
@@ -176,6 +176,8 @@ nav button:hover{
 .phrase{
     color: skyblue;
     font-weight: 900;
+    animation: slideIn 1s;
+    animation-delay: 1.50s;
 }
 
 #home{
@@ -212,6 +214,18 @@ nav button:hover{
     text-align: left;
     font-size: 40px;
     font-weight: 600;
+    transition: all .50s;
+    animation: slideIn 3s;
+}
+
+@keyframes slideIn{
+    0%{opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    100%{
+        opacity: 1;
+    }
 }
 
 
@@ -227,6 +241,12 @@ nav button:hover{
     margin: 20px;
 }
 
+@media(max-width:419px){
+    .home-wrapper{
+        margin-top: 50px;
+    }
+}
+
 
 .home-wrapper .order-btn button{
     width: 120px;
@@ -237,6 +257,8 @@ nav button:hover{
     box-shadow: 4px 4px 5px skyblue;
     cursor: pointer;
     transition: all .50s;
+    animation: slideIn 1s;
+    animation-delay: 2s;
 }
 
 .home-wrapper .order-btn button:hover{
@@ -247,11 +269,15 @@ nav button:hover{
 
 .home-content{
     color: grey;
+    animation: slideIn 1s;
+    animation-delay: 1.50s;
 }
 
 .item-image img{
     width: 100%;
     height: 100%;
+    animation: slideIn 1s;
+    animation-delay: 2.50s;
 }
 
 /****feature section***/
@@ -400,9 +426,29 @@ nav button:hover{
     }
 }
 
+.specs-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .specs-img img{
     width: 100%;
-    height: 100%;
+    height: 70%;
+}
+
+@media(max-width:430px){
+    .specs-img img{
+        width: 100%;
+        height: 45%;
+    }
+}
+
+@media(max-width:321px){
+    .specs-img img{
+        width: 100%;
+        height: 30%;
+    }
 }
 
 
