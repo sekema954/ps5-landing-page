@@ -13,7 +13,7 @@ function menuClicked(){
         menuBar.classList.toggle("change"); //toggle classlist
         dropdownWrapper.classList.toggle("changeHeight");
         navLinks.classList.toggle("showLinks"); //toggle links visiblity
-    })
+    });
 }
 
 

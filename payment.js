@@ -40,7 +40,7 @@ const payBtn = document.querySelector(".pay-btn");
 payBtn.addEventListener("click", ()=>{
     const formInputs = document.querySelectorAll(".form-controll");
     const totalElement = document.querySelector(".total-price").textContent;
-    if(totalElement === "0") {
+    if(totalElement === "0" || isNaN(totalElement())) {
         alert("Cart Empty!");
     } else {
         location.href = "/paymentcomplete.html";
