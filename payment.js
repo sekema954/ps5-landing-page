@@ -35,17 +35,20 @@ bundle3.addEventListener("click", ()=> {
 
 
 //alert cart empty if total = 0
-
 const payBtn = document.querySelector(".pay-btn");
-payBtn.addEventListener("click", ()=>{
+payBtn.addEventListener("click", () => {
     const formInputs = document.querySelectorAll(".form-controll");
-    const totalElement = document.querySelector(".total-price").textContent;
-    if(totalElement === "0" || isNaN(totalElement())) {
+    const totalElement = document.querySelector(".total-price").textContent.trim();
+    const total = parseFloat(totalElement);
+
+    if (total === 0 || isNaN(total)) {
         alert("Cart Empty!");
     } else {
         location.href = "/paymentcomplete.html";
     }
 });
+
+
 
 
 
