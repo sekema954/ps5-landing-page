@@ -43,7 +43,7 @@ payBtn.addEventListener("click", ()=>{
     if(totalElement === "0" || isNaN(totalElement())) {
         alert("Cart Empty!");
     } else {
-        location.href = "paymentcomplete.html";
+        location.href = "/paymentcomplete.html";
     }
 });
 
