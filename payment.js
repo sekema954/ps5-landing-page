@@ -35,7 +35,6 @@ bundle3.addEventListener("click", ()=> {
 
 
 //alert cart empty if total = 0
-
 const payBtn = document.querySelector(".pay-btn");
 payBtn.addEventListener("click", (event) => {
     // Prevent the form from submitting
@@ -43,9 +42,14 @@ payBtn.addEventListener("click", (event) => {
 
     const formInputs = document.querySelectorAll(".form-controll");
     const totalElement = document.querySelector(".total-price").textContent;
+<<<<<<< HEAD
 
     if(totalElement === "0" ){
         alert("Cart is Empty!");
+=======
+    if(totalElement === "0" {
+        alert("Cart Empty!");
+>>>>>>> refs/remotes/origin/main
     } else {
         location.href = "/paymentcomplete.html";
     }
@@ -55,5 +59,8 @@ payBtn.addEventListener("click", (event) => {
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> refs/remotes/origin/main
