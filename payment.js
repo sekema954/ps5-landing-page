@@ -54,8 +54,5 @@ payBtn.addEventListener("click", (event) => {
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> refs/remotes/origin/main
