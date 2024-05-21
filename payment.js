@@ -37,15 +37,23 @@ bundle3.addEventListener("click", ()=> {
 //alert cart empty if total = 0
 
 const payBtn = document.querySelector(".pay-btn");
-payBtn.addEventListener("click", ()=>{
+payBtn.addEventListener("click", (event) => {
+    // Prevent the form from submitting
+    event.preventDefault();
+
     const formInputs = document.querySelectorAll(".form-controll");
     const totalElement = document.querySelector(".total-price").textContent;
-    if(totalElement === "0" || isNaN(totalElement())) {
-        alert("Cart Empty!");
+
+    if(totalElement === "0" ){
+        alert("Cart is Empty!");
     } else {
         location.href = "/paymentcomplete.html";
     }
 });
+
+
+
+
 
 
 
