@@ -46,7 +46,7 @@ payBtn.addEventListener("click", (event) => {
     if(totalElement === "0" ){
         alert("Cart is Empty!");
     } else {
-        location.href = "/paymentcomplete.html";
+        location.href = "paymentcomplete.html";
     }
 });
 
